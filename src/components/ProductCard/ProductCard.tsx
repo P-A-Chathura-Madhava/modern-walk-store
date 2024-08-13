@@ -5,11 +5,11 @@ function ProductCard() {
   // const { title, image, price, description, color } = props;
   const title = "Mens Cotton Jacket";
   const price = 2000;
-  const description = "Mens Cotton Jacket";
+  const description = "Mens Cotton Jacket Perfect";
 
   return (
-    <div>
-      <div className="h-[200px] w-[160px] rounded-2xl shadow-black shadow-3xl cursor-pointer hover:shadow-4xl transition-all duration-300 pt-2">
+    <div className="bg-cardBackground p-6 cursor-pointer hover:bg-cardBackgroundDark duration-300">
+      <div className="h-[200px] w-[160px] cursor-pointer pt-2">
         <div className="px-4">
           <div className="overflow-hidden">
             <h2 className="text-center text-xs font-bold">{title}</h2>
@@ -26,7 +26,7 @@ function ProductCard() {
           <h2 className="text-center text-blue-600 text-md font-bold pb-2 pt-2">
             Rs. {price}
           </h2>
-          <p className="text-center text-xs truncate">{description}</p>
+          <p className="text-center text-xs">{description}</p>
         </div>
       </div>
     </div>

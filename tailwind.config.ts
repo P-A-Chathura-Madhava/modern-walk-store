@@ -19,6 +19,8 @@ const config = {
     },
     extend: {
       colors: {
+        cardBackground: "#E5E5E5",
+        cardBackgroundDark: "#d1d1d1",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
