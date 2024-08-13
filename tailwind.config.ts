@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'mens-color': "#2BD9AF"
+      },
+      boxShadow: {
+        '3xl': '6px 10px 21px -6px rgba(0,0,0,0.75)',
+        "4xl": "15px 18px 26px 0px rgba(0,0,0,0.75)"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
