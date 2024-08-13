@@ -1,11 +1,14 @@
+import Image from 'next/image'
 import React from 'react'
+import mensClothing from "@/assets/mens-clothing.jpg";
 
 function CategoriesCard() {
   return (
     <div
-    className="px-16 h-[180px] w-[400px] rounded-2xl shadow-black shadow-3xl flex items-center justify-center bg-mens-color hover:shadow-4xl hover:cursor-pointer duration-300"
+    className="bg-slate-600 flex justify-center"
   >
-    <h2 className="text-white text-4xl font-bold">Men's Clothing</h2>
+    <Image src={mensClothing} alt='clothing-category' height={200}/>
+    <h2 className="text-white text-4xl font-bold absolute bottom-[-30px] bg-slate-600 p-2 bg-opacity-70">Men's Clothing</h2>
   </div>
   )
 }

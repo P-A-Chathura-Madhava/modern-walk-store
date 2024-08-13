@@ -8,7 +8,7 @@ function HomePage() {
       
       <div className="container mx-auto mt-4 px-44">
         <h3 className="font-bold">Flash Sale</h3>
-        <div className="flex justify-around items-center py-6">
+        <div className="flex justify-between items-center py-6">
           <ProductCard />
           <ProductCard />
           <ProductCard />
@@ -17,8 +17,9 @@ function HomePage() {
       </div>
       <div className="container mx-auto mb-6 px-44"> 
         <h3 className="font-bold mt-2">Categories</h3>   
-      <div className="flex items-center justify-between py-6">
+      <div className="flex items-center py-6 gap-6">
         <CategoriesCard />        
+        <CategoriesCard />
         <CategoriesCard />
       </div>
       </div>
