@@ -25,6 +25,7 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { FaRegUser } from "react-icons/fa";
 
 // Navigation Menu -----------------------------------------
 const components: { title: string; href: string; description: string }[] = [
@@ -92,25 +93,8 @@ function Navbar() {
                 <NavigationMenuTrigger>Men's Clothing</NavigationMenuTrigger>
                 <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="/mens-clothing" title="Men's Clothing">
+                Newly arrived Men's cloth Designs.
               </ListItem>
               <ListItem href="/docs/installation" title="Installation">
                 How to install dependencies and structure your app.
@@ -124,16 +108,16 @@ function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Women's Clothing</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
+                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+              <ListItem href="/womens-clothing" title="Women's Clothing">
+                Newly arrived Women's clothing Designs.
+              </ListItem>
+              <ListItem href="/docs/installation" title="Installation">
+                How to install dependencies and structure your app.
+              </ListItem>
+              <ListItem href="/docs/primitives/typography" title="Typography">
+                Styles for headings, paragraphs, lists...etc
+              </ListItem>
             </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -143,7 +127,10 @@ function Navbar() {
         <div className="flex gap-4 items-center">
           <div>Cart</div>
           <DropdownMenu>
-            <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+            <DropdownMenuTrigger className="flex gap-2 items-center border-foreground border-[1px] p-2 rounded-sm">
+              <FaRegUser />
+              My Account
+              </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
